@@ -6,7 +6,7 @@ const handler = (err, req, resp) => {
 	logger.error(`Err Handler: ${err.message}`);
 	return resp.status(err.status || 500).json({
 		code: err.status || 500,
-		message: err.message || httpStatus[err.status],
+		message: err.message || httpStatus[err.status]
 	});
 };
 
